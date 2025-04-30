@@ -1,4 +1,4 @@
-package HSE_Basic.lesson_3;
+package HSE_Java_Basic.lessons_all.lesson_3;
 
 import java.util.Arrays;
 
