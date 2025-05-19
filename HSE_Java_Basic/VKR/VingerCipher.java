@@ -29,8 +29,6 @@ class VingerCipher {
             offset = caesarCipher.getCharPosition(key_arr[i]);
             if(ch != -1)
             {
-                System.out.println(ch);
-                System.out.println(offset);
                 if (encr) {final_char = caesarCipher.encrypt(String.valueOf(c), offset);}
                 else {final_char = caesarCipher.decrypt(String.valueOf(c), offset);}
 
