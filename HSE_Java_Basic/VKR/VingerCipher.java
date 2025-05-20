@@ -42,5 +42,4 @@ class VingerCipher {
             }
         return result.toString();
     }
-    
 }

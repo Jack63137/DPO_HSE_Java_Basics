@@ -12,20 +12,30 @@ public class Main {
         boolean isRigth = false;
         int n;
         do{
-            System.out.println("Выберите шифр:");
-            System.out.println("1. Шифр Цезяра | 2. Шифр Винжера");
+            System.out.println("\nВыберите шифр:");
+            System.out.println("1. Шифр Цезяра");
+            System.out.println("2. Шифр Винжера");
+            System.out.println("3. Шифр Атбаш");
             n = scanner.nextInt();
-            if (n ==1){
-                System.out.println("Переход к шифру Цезаря");
-                typeOfCipther(n);
-                break;
-            }
-            else if(n==2){
-                System.out.println("Переход к шифру Винжера");
-                typeOfCipther(n);
-                break;
-            } else{
-                System.out.println("ошибка ввода, повторите...");
+            switch (n) {
+                case 1:
+                    System.out.println("\nПереход к шифру Цезаря");
+                    typeOfCipther(n);
+                    break;
+                case 2:
+                    System.out.println("\nПереход к шифру Винжера");
+                    typeOfCipther(n);
+                    break;
+                case 3:
+                    System.out.println("\nПереход к шифру Атбаш");
+                    Scanner scanner2 = new Scanner(System.in);
+                    System.out.println("\nВведите текст: ");
+                    String text = scanner2.nextLine();
+                    System.out.println(AtbashCipher.encrypt(text));
+                    break;
+            
+                default:
+                    System.out.println("ошибка ввода, повторите...");
             }
                 
         }
@@ -37,11 +47,12 @@ public class Main {
         boolean isRigth = false;
         int n;
         do{
-            System.out.println("Выберите тип:");
-            System.out.println("1. Зашифровать | 2. Расшифровать");
+            System.out.println("\nВыберите тип:");
+            System.out.println("1. Зашифровать");
+            System.out.println("2. Расшифровать");
             n = scanner.nextInt();
             if (n ==1){
-                System.out.println("Переход к зашифрованию");
+                System.out.println("\nПереход к зашифрованию");
                 switch (type) {
                     case 1: //Цезарь зашифровать
                         caesarCipher_input(true);
@@ -55,7 +66,7 @@ public class Main {
                 break;
             }
             else if(n==2){
-                System.out.println("Переход разшифрованию");
+                System.out.println("\nПереход разшифрованию");
                 switch (type) {
                     case 1: //Цезарь зашифровать
                         caesarCipher_input(false);
@@ -68,7 +79,7 @@ public class Main {
                 }
                 break;
             } else{
-                System.out.println("ошибка ввода, повторите...");
+                System.out.println("\nошибка ввода, повторите...");
             }
                 
         }
