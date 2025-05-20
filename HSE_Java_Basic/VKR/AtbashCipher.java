@@ -3,9 +3,6 @@ package HSE_Java_Basic.VKR;
 class AtbashCipher {
     private static final String ru_alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
 
-    public AtbashCipher() {
-    }
-    
     public static String encrypt(String text) {
         return process(text);
     }
