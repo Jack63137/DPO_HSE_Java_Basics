@@ -39,7 +39,7 @@ public class CaesarCipher {
                 }
             } else if (Character.isLowerCase(c)) {
                 //Строчные буквы
-                int index = ru_alphabet.indexOf(Character.toLowerCase(c)); // приводим к нижнему регистру
+                int index = ru_alphabet.indexOf(Character.toUpperCase(c)); // приводим к верхнему регистру
                 if (index != -1) { 
                     // Русская строчная буква
                     if (yo) {
