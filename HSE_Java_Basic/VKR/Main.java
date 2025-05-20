@@ -88,7 +88,7 @@ public class Main {
     private static void caesarCipher_input(boolean encr){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите текст"); String text = scanner.nextLine();
-        System.out.println("Введите ключ"); int key = scanner.nextInt();
+        System.out.println("Введите ключ (Число)"); int key = scanner.nextInt();
         CaesarCipher caesarCipher = new CaesarCipher(true);
         String encripted_text;
         if (encr) {
@@ -102,7 +102,7 @@ public class Main {
     private static void vingerCipher_input(boolean encr){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите текст"); String text = scanner.nextLine();
-        System.out.println("Введите ключ"); String key = scanner.nextLine();
+        System.out.println("Введите ключ (Слово)"); String key = scanner.nextLine();
         VingerCipher vingerCipher = new VingerCipher();
         String encripted_text;
         if (encr) {
